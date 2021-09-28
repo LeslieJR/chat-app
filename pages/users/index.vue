@@ -11,13 +11,8 @@
       <v-col>
         <h1 class="text-center mb-4">Users</h1>
         <v-row v-for="(user, index) in users" :key="index">
-          <v-col cols="9">
-            <h2>{{user.email}}</h2>
-          </v-col>
-          <v-col cols="3">
-            <nuxt-link class="text-decoration-none" :to="`/users/${user._id}`">
-              <v-btn class="cyan darken-1 white--text">CHAT</v-btn>
-            </nuxt-link>
+          <v-col>
+            <User :user="user"/>
           </v-col>
         </v-row>
       </v-col>

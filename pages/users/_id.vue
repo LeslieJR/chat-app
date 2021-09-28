@@ -45,12 +45,14 @@ export default {
       messages: [],
       params_id: undefined,
       user_id: undefined,
+      admin: false,
       message: undefined,
     };
   },
   async beforeMount() {
     this.params_id = this.$route.params.id;
     this.user_id = window.localStorage.getItem("userId");
+    this.admin = window.localStorage.getItem('admin');
     const token = window.localStorage.getItem("token");
     if (!token) {
       this.$router.push("/sign-in");
