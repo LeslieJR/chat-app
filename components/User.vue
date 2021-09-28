@@ -5,7 +5,7 @@
         <v-card-title>{{ user.email }}</v-card-title>
       </v-col>
       <v-col cols="3">
-        <v-card-actions>
+        <v-card-actions class="justify-space-around">
           <nuxt-link class="text-decoration-none" :to="`/users/${user._id}`">
             <v-btn class="cyan darken-1 white--text">CHAT</v-btn>
           </nuxt-link>
