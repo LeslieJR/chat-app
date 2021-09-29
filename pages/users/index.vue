@@ -12,7 +12,7 @@
         <h1 class="text-center mb-4">Users</h1>
         <v-row v-for="(user, index) in users" :key="index">
           <v-col>
-            <User :user="user"/>
+            <User :user="user" @onPrueba="handleUpdates"/>
           </v-col>
         </v-row>
       </v-col>
@@ -45,20 +45,25 @@ export default {
         });
         const data = await res.json();
 
-        if(data.error){
-          alert(data.error)
-          return this.$router.push('/sign-in')
+        if (data.error) {
+          alert(data.error);
+          return this.$router.push("/sign-in");
         }
 
         this.users = data;
       } catch (err) {
-        alert(err)
+        alert(err);
       }
     },
-    logout(){
+    logout() {
       window.localStorage.clear();
-      this.$router.push('/sign-in')
-    }
+      this.$router.push("/sign-in");
+    },
+    handleUpdates() {
+      console.log('deleted')
+      const token = window.localStorage.getItem("token");
+      this.getUsers(token);
+    },
   },
 };
 </script>

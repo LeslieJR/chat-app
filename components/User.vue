@@ -42,10 +42,10 @@ export default {
       type: Object,
       required: true,
     },
+
   },
   methods: {
     async removeUser(id) {
-      console.log({ id, token: this.token });
       const hostname = `http://localhost:4400/api/users/delete/${id}`;
       await fetch(hostname, {
           method: "delete",
@@ -53,6 +53,9 @@ export default {
             token: this.token,
           },
         });
+
+        this.$emit('onPrueba')
+
     },
   },
 };
