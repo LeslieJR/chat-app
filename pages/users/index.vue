@@ -12,7 +12,7 @@
         <h1 class="text-center mb-4">Users</h1>
         <v-row v-for="(user, index) in users" :key="index">
           <v-col>
-            <User :user="user" @onPrueba="handleUpdates"/>
+            <User :user="user" @onUpdate="handleUpdates"/>
           </v-col>
         </v-row>
       </v-col>
@@ -60,7 +60,6 @@ export default {
       this.$router.push("/sign-in");
     },
     handleUpdates() {
-      console.log('deleted')
       const token = window.localStorage.getItem("token");
       this.getUsers(token);
     },
