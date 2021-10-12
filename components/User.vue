@@ -46,7 +46,7 @@ export default {
   },
   methods: {
     async removeUser(id) {
-      const hostname = `http://localhost:4400/api/users/delete/${id}`;
+      const hostname = `https://desolate-sea-00474.herokuapp.com/api/users/delete/${id}`;
       await fetch(hostname, {
           method: "delete",
           headers: {

@@ -62,7 +62,7 @@ export default {
   methods: {
     async getMessages(token) {
       try {
-        const hostname = "http://localhost:4400/api/messages/chat";
+        const hostname = "https://desolate-sea-00474.herokuapp.com/api/messages/chat";
         const user_one_id = window.localStorage.getItem("userId");
         const user_two_id = this.params_id;
         const body = {
@@ -101,7 +101,7 @@ export default {
           user_owner_id: user_one_id,
           message: this.message,
         };
-        const res = await fetch("http://localhost:4400/api/messages/create", {
+        const res = await fetch("https://desolate-sea-00474.herokuapp.com/api/messages/create", {
           method: "POST",
           headers: {
             token,

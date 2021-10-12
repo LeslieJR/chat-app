@@ -62,7 +62,7 @@ export default ({
         alert("Required field missing");
         return
       }
-      const hostname = "http://localhost:4400/api/users";
+      const hostname = "https://desolate-sea-00474.herokuapp.com/api/users";
       const body = {
         email: this.email,
         password: this.password,

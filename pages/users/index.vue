@@ -37,7 +37,7 @@ export default {
   methods: {
     async getUsers(token) {
       try {
-        const hostname = "http://localhost:4400/api/users/all";
+        const hostname = "https://desolate-sea-00474.herokuapp.com/api/users/all";
         const res = await fetch(hostname, {
           headers: {
             token,
