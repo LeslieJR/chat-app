@@ -2,7 +2,7 @@
   <div>
     <v-card class="mx-auto my-12" width="374">
       <v-card-title class="mt-4">
-        <v-row align="center" justify="center">
+        <v-row class="mt-4" align="center" justify="center">
           <h1>Sign In</h1>
         </v-row>
       </v-card-title>
