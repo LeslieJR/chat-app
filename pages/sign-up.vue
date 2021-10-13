@@ -82,7 +82,7 @@ export default {
         return;
       }
 
-      const hostname = "https://desolate-sea-00474.herokuapp.com/api/users";
+      const hostname = "https://chat-app-leslie.herokuapp.com/api/users";
       const body = {
         email: this.email,
         password: this.password,
