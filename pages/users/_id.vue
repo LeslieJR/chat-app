@@ -62,7 +62,7 @@ export default {
   methods: {
     async getMessages(token) {
       try {
-        const hostname = "https://chat-app-leslie.herokuapp.com/api/messages/chat";
+        const hostname = "https://chat-server-leslie.herokuapp.com/api/messages/chat";
         const user_one_id = window.localStorage.getItem("userId");
         const user_two_id = this.params_id;
         const body = {

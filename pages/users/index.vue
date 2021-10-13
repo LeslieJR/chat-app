@@ -37,7 +37,7 @@ export default {
   methods: {
     async getUsers(token) {
       try {
-        const hostname = "https://chat-app-leslie.herokuapp.com/api/users/all";
+        const hostname = "https://chat-server-leslie.herokuapp.com/api/users/all";
         const res = await fetch(hostname, {
           headers: {
             token,

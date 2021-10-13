@@ -46,7 +46,7 @@ export default {
   },
   methods: {
     async removeUser(id) {
-      const hostname = `https://chat-app-leslie.herokuapp.com/api/users/delete/${id}`;
+      const hostname = `https://chat-server-leslie.herokuapp.com/api/users/delete/${id}`;
       await fetch(hostname, {
           method: "delete",
           headers: {

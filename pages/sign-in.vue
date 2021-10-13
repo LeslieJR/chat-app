@@ -62,7 +62,7 @@ export default ({
         alert("Required field missing");
         return
       }
-      const hostname = "https://chat-app-leslie.herokuapp.com/api/users";
+      const hostname = "https://chat-server-leslie.herokuapp.com/api/users";
       const body = {
         email: this.email,
         password: this.password,
