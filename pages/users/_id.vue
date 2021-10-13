@@ -69,7 +69,6 @@ export default {
           user_one_id,
           user_two_id,
         };
-        console.log(body);
         const res = await fetch(hostname, {
           method: "POST",
           headers: {
@@ -80,7 +79,6 @@ export default {
         });
 
         const data = await res.json();
-        console.log(data);
         if (data.error) {
           alert(data.error);
           return this.$router.push("/sign-in");

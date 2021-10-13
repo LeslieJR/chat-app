@@ -79,7 +79,6 @@ export default ({
       if (data.error) {
         alert(data.error);
       } else {
-        console.log(data)
         window.localStorage.setItem('token', data.token)
         window.localStorage.setItem('userId', data.userId)
         window.localStorage.setItem('admin', data.admin)
